@@ -39,11 +39,11 @@ end;
 BEGIN
  clrscr;
  textcolor(10);
- sergey.init;  //экземпляр объекта father вызовает метод init 
- anton.init;   //экземпляр объекта son вызовает метод init
+ sergey.init;  //экземпляр объекта father вызывает метод init 
+ anton.init;   //экземпляр объекта son вызывает метод init
 
- sergey.talk;  //экземпляр объекта father вызовает метод talk 
- anton.talk;   //экземпляр объекта son вызовает метод talk
+ sergey.talk;  //экземпляр объекта father вызывает метод talk 
+ anton.talk;   //экземпляр объекта son вызывает метод talk
  readln;
 END.
 
