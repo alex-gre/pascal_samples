@@ -1,0 +1,28 @@
+object Form2: TForm2
+  Left = 238
+  Height = 64
+  Top = 253
+  Width = 162
+  Caption = 'Form2'
+  ClientHeight = 64
+  ClientWidth = 162
+  LCLVersion = '1.6.0.4'
+  object Label1: TLabel
+    Left = 16
+    Height = 20
+    Top = 24
+    Width = 74
+    Caption = 'Show form2'
+    Color = clHighlight
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Color = clYellow
+    Font.Height = -16
+    Font.Name = 'Arial Narrow'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+    Transparent = False
+  end
+end

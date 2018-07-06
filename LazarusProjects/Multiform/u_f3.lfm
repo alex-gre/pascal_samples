@@ -1,0 +1,28 @@
+object Form3: TForm3
+  Left = 238
+  Height = 70
+  Top = 253
+  Width = 169
+  Caption = 'Form3'
+  ClientHeight = 70
+  ClientWidth = 169
+  LCLVersion = '1.6.0.4'
+  object Label1: TLabel
+    Left = 30
+    Height = 20
+    Top = 25
+    Width = 79
+    Caption = 'ShowModal3'
+    Color = clMenuHighlight
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Color = clYellow
+    Font.Height = -16
+    Font.Name = 'Arial Narrow'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+    Transparent = False
+  end
+end
