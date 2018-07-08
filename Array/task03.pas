@@ -28,10 +28,9 @@ begin
 		if a[i]<(a[i]+a[i]+1)/2 then h:=h+1;
          end;
 {----------------------------OUTPUT Result-----------------------------------------}
-	Writeln('Nechetnyh chisel= ',q);
-	Writeln('Kratnyh 3 i ne kratnyh 5= ',w);
-	Writeln('Yavlyauwihsya kvadratami chetnyh chise;= ',r);
-	Writeln('Ydovletvoryauwih uslovie a[i] < (a[i]+a[i]+1)/2  = ',h);
+	Writeln('Нечетных чисел:  ',q);
+	Writeln('Кратных 3 и не кратных 5: ',w);
+	Writeln('Являются квадратами четных чисел:  ',r);
+	Writeln('Удовлетворительных условий a[i] < (a[i]+a[i]+1)/2  => ',h);
 
-readln;
 end.
