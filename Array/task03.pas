@@ -14,7 +14,7 @@ var
 	i,n,q,r,w,h:integer;
 	e:real;
 begin
-  write ('Vvedite kollichestvo elementov= ');
+  write ('Введите кол. элементов:  ');
   readln(n);
 {-------------------------INPUT Element n------------------------------}
   for i:=1 to n do
