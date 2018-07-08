@@ -12,7 +12,7 @@ begin
      s.write(j,2)                       {помещаем в поток}
    end;
   s.done;                               {удаляем поток}
-  s.init('Test.dat', stOPenRead, 512);  
+  s.init('test.dat', stOpenRead, 512);  
   writeln;
   writeln('Чтение из потока:');
   for k:= 1 to 10 do
