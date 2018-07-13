@@ -1,0 +1,116 @@
+object Form1: TForm1
+  Left = 760
+  Height = 640
+  Top = 99
+  Width = 1124
+  Caption = 'Form1'
+  ClientHeight = 640
+  ClientWidth = 1124
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  LCLVersion = '1.6.0.4'
+  object DBNavigator1: TDBNavigator
+    Left = 352
+    Height = 25
+    Top = 8
+    Width = 608
+    BevelOuter = bvNone
+    ChildSizing.EnlargeHorizontal = crsScaleChilds
+    ChildSizing.EnlargeVertical = crsScaleChilds
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 100
+    ClientHeight = 25
+    ClientWidth = 608
+    DataSource = DataSource1
+    OnClick = DBNavigator1Click
+    Options = []
+    TabOrder = 0
+  end
+  object DBGrid1: TDBGrid
+    Left = 3
+    Height = 584
+    Top = 53
+    Width = 1118
+    Align = alBottom
+    Anchors = [akTop]
+    BorderSpacing.Left = 3
+    BorderSpacing.Right = 3
+    BorderSpacing.Bottom = 3
+    Color = clWindow
+    Columns = <>
+    DataSource = DataSource1
+    TabOrder = 1
+  end
+  object Button1: TButton
+    Left = 3
+    Height = 25
+    Top = 8
+    Width = 75
+    Caption = 'All record'
+    OnClick = Button1Click
+    TabOrder = 2
+  end
+  object Edit1: TEdit
+    Left = 160
+    Height = 23
+    Top = 8
+    Width = 189
+    TabOrder = 3
+    TextHint = 'input PO_NUMBER '
+    TextHintFontColor = clHotLight
+  end
+  object Button2: TButton
+    Left = 80
+    Height = 25
+    Top = 8
+    Width = 75
+    Caption = 'search'
+    OnClick = Button2Click
+    TabOrder = 4
+  end
+  object Button3: TButton
+    Left = 968
+    Height = 25
+    Top = 8
+    Width = 75
+    Caption = 'commit'
+    OnClick = Button3Click
+    TabOrder = 5
+  end
+  object IBConnection1: TIBConnection
+    Connected = False
+    LoginPrompt = False
+    DatabaseName = 'C:\Program Files (x86)\Firebird\Firebird_3_0\examples\empbuild\EMPLOYEE.FDB'
+    KeepConnection = False
+    Password = 'masterkey'
+    Transaction = SQLTransaction1
+    UserName = 'SYSDBA'
+    HostName = 'localhost'
+    Options = []
+    left = 184
+    top = 96
+  end
+  object SQLTransaction1: TSQLTransaction
+    Active = False
+    Database = IBConnection1
+    Options = []
+    left = 96
+    top = 96
+  end
+  object SQLQuery1: TSQLQuery
+    FieldDefs = <>
+    Database = IBConnection1
+    Transaction = SQLTransaction1
+    Options = []
+    Params = <>
+    left = 152
+    top = 96
+  end
+  object DataSource1: TDataSource
+    DataSet = SQLQuery1
+    left = 48
+    top = 96
+  end
+end
