@@ -1,0 +1,7 @@
+﻿CREATE TABLE `myArtTable` (   
+  `id` int(11) NOT NULL auto_increment,  
+  `text` text NOT NULL,   
+  `description` text NOT NULL,   
+  `keywords` text NOT NULL,  
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=cp1251 AUTO_INCREMENT=16;
