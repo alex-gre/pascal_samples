@@ -1,0 +1,210 @@
+object Form1: TForm1
+  Left = 290
+  Height = 490
+  Top = 158
+  Width = 930
+  Caption = 'Form1'
+  ClientHeight = 490
+  ClientWidth = 930
+  OnDestroy = FormDestroy
+  LCLVersion = '1.6.0.4'
+  object Label1: TLabel
+    Left = 16
+    Height = 15
+    Top = 208
+    Width = 58
+    Caption = 'Ключевые'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 16
+    Height = 15
+    Top = 238
+    Width = 55
+    Caption = 'Описание'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 16
+    Height = 15
+    Top = 312
+    Width = 30
+    Caption = 'Текст'
+    ParentColor = False
+  end
+  object Label4: TLabel
+    Left = 216
+    Height = 15
+    Top = 160
+    Width = 133
+    Caption = 'Навигационный способ'
+    ParentColor = False
+  end
+  object Label5: TLabel
+    Left = 632
+    Height = 15
+    Top = 184
+    Width = 120
+    Caption = 'Реляционный способ'
+    ParentColor = False
+  end
+  object Button1: TButton
+    Left = 16
+    Height = 25
+    Top = 8
+    Width = 112
+    Caption = 'Подключиться ...'
+    OnClick = Button1Click
+    TabOrder = 0
+  end
+  object DBGrid1: TDBGrid
+    Left = 16
+    Height = 104
+    Top = 48
+    Width = 450
+    Color = clWindow
+    Columns = <>
+    DataSource = Datasource1
+    ReadOnly = True
+    TabOrder = 1
+  end
+  object Button2: TButton
+    Left = 272
+    Height = 25
+    Top = 432
+    Width = 180
+    Caption = 'Сохранить изменения в базу'
+    OnClick = Button2Click
+    TabOrder = 2
+  end
+  object DBMemo1: TDBMemo
+    Left = 80
+    Height = 58
+    Top = 240
+    Width = 392
+    DataField = 'description'
+    DataSource = Datasource1
+    TabOrder = 3
+  end
+  object Button3: TButton
+    Left = 88
+    Height = 25
+    Top = 432
+    Width = 180
+    Caption = 'Добавить новую запись'
+    OnClick = Button3Click
+    TabOrder = 4
+  end
+  object DBMemo2: TDBMemo
+    Left = 80
+    Height = 114
+    Top = 312
+    Width = 390
+    DataField = 'text'
+    DataSource = Datasource1
+    TabOrder = 5
+  end
+  object DBMemo3: TDBMemo
+    Left = 80
+    Height = 24
+    Top = 208
+    Width = 390
+    DataField = 'keywords'
+    DataSource = Datasource1
+    TabOrder = 6
+  end
+  object Memo1: TMemo
+    Left = 488
+    Height = 26
+    Top = 208
+    Width = 392
+    Lines.Strings = (
+      'Memo1'
+    )
+    TabOrder = 7
+  end
+  object Memo2: TMemo
+    Left = 488
+    Height = 58
+    Top = 240
+    Width = 392
+    Lines.Strings = (
+      'Memo2'
+    )
+    TabOrder = 8
+  end
+  object Memo3: TMemo
+    Left = 488
+    Height = 114
+    Top = 312
+    Width = 392
+    Lines.Strings = (
+      'Memo3'
+    )
+    TabOrder = 9
+  end
+  object Button4: TButton
+    Left = 733
+    Height = 25
+    Top = 432
+    Width = 147
+    Caption = 'Добавить новую запись'
+    OnClick = Button4Click
+    TabOrder = 10
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 152
+    Height = 25
+    Top = 176
+    Width = 241
+    BevelOuter = bvNone
+    ChildSizing.EnlargeHorizontal = crsScaleChilds
+    ChildSizing.EnlargeVertical = crsScaleChilds
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 100
+    ClientHeight = 25
+    ClientWidth = 241
+    DataSource = Datasource1
+    Options = []
+    TabOrder = 11
+  end
+  object MySQL50Connection1: TMySQL50Connection
+    Connected = False
+    LoginPrompt = False
+    DatabaseName = 'work_db'
+    KeepConnection = False
+    Transaction = SQLTransaction1
+    UserName = 'root'
+    HostName = '127.0.0.1'
+    Options = []
+    left = 152
+    top = 8
+  end
+  object SQLQuery1: TSQLQuery
+    FieldDefs = <>
+    BeforeOpen = SQLQuery1BeforeOpen
+    Database = MySQL50Connection1
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'Select * from jos_modules;'
+    )
+    Options = []
+    Params = <>
+    left = 224
+    top = 8
+  end
+  object Datasource1: TDataSource
+    DataSet = SQLQuery1
+    left = 256
+    top = 8
+  end
+  object SQLTransaction1: TSQLTransaction
+    Active = False
+    Database = MySQL50Connection1
+    Options = []
+    left = 192
+    top = 8
+  end
+end

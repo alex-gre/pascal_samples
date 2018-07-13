@@ -1,0 +1,23 @@
+object Form2: TForm2
+  Left = 368
+  Height = 228
+  Top = 228
+  Width = 400
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsDialog
+  Caption = 'Form2'
+  ClientHeight = 228
+  ClientWidth = 400
+  OnHide = FormHide
+  ParentFont = False
+  LCLVersion = '0.9.26'
+  object Button1: TButton
+    Left = 280
+    Height = 25
+    Top = 24
+    Width = 75
+    Caption = 'Отменить'
+    OnClick = Button1Click
+    TabOrder = 0
+  end
+end
