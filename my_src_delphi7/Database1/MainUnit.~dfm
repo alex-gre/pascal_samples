@@ -1,0 +1,54 @@
+object Form1: TForm1
+  Left = 215
+  Top = 122
+  Width = 494
+  Height = 204
+  Caption = #1046#1091#1088#1085#1072#1083'_'#1085#1072#1073#1083#1102#1076#1077#1085#1080#1081
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object DBGrid1: TDBGrid
+    Left = 0
+    Top = 0
+    Width = 486
+    Height = 160
+    Align = alClient
+    DataSource = DataSource1
+    TabOrder = 0
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Style = []
+  end
+  object ADOConnection1: TADOConnection
+    Connected = True
+    ConnectionString = 
+      'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=Database.mdb;Persis' +
+      't Security Info=False'
+    LoginPrompt = False
+    Mode = cmShareDenyNone
+    Provider = 'Microsoft.Jet.OLEDB.4.0'
+    Left = 32
+    Top = 80
+  end
+  object BookTable: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    TableName = #1057#1087#1088#1072#1074#1086#1095#1085#1080#1082
+    Left = 72
+    Top = 128
+  end
+  object DataSource1: TDataSource
+    DataSet = BookTable
+    Left = 72
+    Top = 80
+  end
+end
